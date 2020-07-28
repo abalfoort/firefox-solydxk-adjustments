@@ -1,0 +1,17 @@
+Source: firefox-solydxk-adjustments
+Section: web
+Priority: optional
+Maintainer: Arjen Balfoort <arjenbalfoort@solydxk.com>
+Build-Depends: debhelper-compat (= 12)
+Standards-Version: 4.5.0
+
+Package: firefox-solydxk-adjustments
+Architecture: all
+Depends: ${misc:Depends}, 
+  firefox | firefox-esr
+Replaces: firefox-esr-solydxk-adjustments (<< 2016.06.11),
+  firefox-solydxk-adjustments (<< 1018.12.16)
+Conflicts: firefox-esr-solydxk-adjustments (<< 2016.06.11),
+  firefox-solydxk-adjustments (<< 1018.12.16)
+Description: Adjustments for Mozilla Firefox
+ SolydXK configuration adjustements for Mozilla Firefox

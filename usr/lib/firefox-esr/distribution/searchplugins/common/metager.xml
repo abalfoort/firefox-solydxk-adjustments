@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+    <ShortName>MetaGer EN</ShortName>
+    <Description>MetaGer: Privacy Protected Search &amp; Find.</Description>
+    <Contact>office@suma-ev.de</Contact>
+    <InputEncoding>UTF-8</InputEncoding>
+    <Image height="16" width="16" type="image/x-icon">https://metager.org/favicon.ico</Image>
+    <Url type="text/html" method="get" template="https://metager.org/meta/meta.ger3?focus=web&amp;eingabe={searchTerms}&amp;encoding=utf8&amp;lang=en"/>
+    <moz:SearchForm>https://metager.org</moz:SearchForm>
+</OpenSearchDescription>

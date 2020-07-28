@@ -1,0 +1,50 @@
+{
+    "policies": {
+        "DisableAppUpdate": true,
+        "AppUpdateURL": "https://update.invalid", 
+        "NoDefaultBookmarks": true,
+        "DefaultDownloadDirectory": "${home}/Downloads",
+        "DisableTelemetry": true,
+        "DisableFirefoxStudies": true,
+        "DisablePocket": true,
+        "NetworkPrediction": false,
+        "SearchBar": "separate",
+        "SearchSuggestEnabled": false,
+        "Cookies": {
+            "Default": true,
+            "AcceptThirdParty": "from-visited",
+            "ExpireAtSessionEnd": true,
+            "RejectTracker": true,
+            "Locked": false
+        },
+        "EnableTrackingProtection": {
+            "Value": true,
+            "Locked": false
+        },
+        "SearchEngines": {
+            "Default": "Startpage"
+        },
+        "PopupBlocking": {
+            "Default": true,
+            "Locked": false
+        },
+        "FirefoxHome": {
+            "Search": true,
+            "Topsites": true,
+            "Highlights": false,
+            "Pocket": false,
+            "Snippets": false,
+            "Locked": false
+        },
+        "SupportMenu": {
+            "Title": "SolydXK Support",
+            "URL": "https://forums.solydxk.com",
+            "AccessKey": "S"
+        },
+        "DNSOverHTTPS": {
+            "Enabled": false,
+            "ProviderURL": " ",
+            "Locked": false
+        }
+    }
+}
