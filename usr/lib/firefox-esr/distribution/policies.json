@@ -22,7 +22,7 @@
             "Locked": false
         },
         "SearchEngines": {
-            "Default": "Startpage"
+            "Default": "DuckDuckGo"
         },
         "PopupBlocking": {
             "Default": true,
