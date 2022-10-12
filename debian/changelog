@@ -1,3 +1,10 @@
+firefox-solydxk-adjustments (2022.11.06) stable; urgency=low
+
+  * Remove https everywhere
+  * Remove privacy badger
+
+ -- Arjen Balfoort <arjenbalfoort@solydxk.com>  Thu, 06 Oct 2022 14:35:00 +0200
+
 firefox-solydxk-adjustments (2022.09.07) stable; urgency=low
 
   * Update uBlock origin
