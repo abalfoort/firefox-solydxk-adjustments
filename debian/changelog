@@ -1,3 +1,9 @@
+firefox-solydxk-adjustments (2023.06.20) stable; urgency=low
+
+  * Updated addons
+
+ -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Tue, 20 Jun 2023 18:51:04 +0200
+
 firefox-solydxk-adjustments (2023.02.27) stable; urgency=low
 
   * distribution.ini: comment network.http.referer.trimmingPolicy
