@@ -1,9 +1,4 @@
 /usr/lib/firefox-esr/distribution/extensions/uBlock0@raymondhill.net.xpi /opt/firefox/distribution/extensions/uBlock0@raymondhill.net.xpi
-/usr/lib/firefox-esr/distribution/extensions/https-everywhere@eff.org.xpi /opt/firefox/distribution/extensions/https-everywhere@eff.org.xpi
-/usr/lib/firefox-esr/distribution/extensions/jid1-MnnxcxisBPnSXQ@jetpack.xpi /opt/firefox/distribution/extensions/jid1-MnnxcxisBPnSXQ@jetpack.xpi
-/usr/lib/firefox-esr/distribution/searchplugins/common/startpage.xml /opt/firefox/distribution/searchplugins/common/startpage.xml
-/usr/lib/firefox-esr/distribution/searchplugins/common/duckduckgo.xml /opt/firefox/distribution/searchplugins/common/duckduckgo.xml
-/usr/lib/firefox-esr/distribution/searchplugins/common/qwant.xml /opt/firefox/distribution/searchplugins/common/qwant.xml
-/usr/lib/firefox-esr/distribution/searchplugins/common/ecosia.xml /opt/firefox/distribution/searchplugins/common/ecosia.xml
+/usr/lib/firefox-esr/distribution/extensions/skipredirect@sblask.xpi /opt/firefox/distribution/extensions/skipredirect@sblask.xpi
 /usr/lib/firefox-esr/distribution/distribution.ini /opt/firefox/distribution/distribution.ini
 /usr/lib/firefox-esr/distribution/policies.json /opt/firefox/distribution/policies.json
