@@ -22,24 +22,14 @@
             "Locked": false
         },
         "SearchEngines": {
-            "PreventInstalls": false,
-            "Remove": ["Amazon.com", "eBay", "Twitter"],
             "Default": "DuckDuckGo",
             "Add": [
-                {
-                "Name": "DuckDuckGo",
-                "URLTemplate": "https://duckduckgo.com/?q={searchTerms}&kz=-1&kav=1&kn=1&k1=-1&kak=-1&kax=-1&kaq=-1&kap=-1&kao=-1&kau=-1&ia=web",
-                "Method": "GET",
-                "IconURL": "https://duckduckgo.com/favicon.ico",
-                "Alias": "Duck",
-                "Description": "Duck Duck Go"
-                },
                 {
                 "Name": "Ecosia",
                 "URLTemplate": "https://www.ecosia.org/search?q={searchTerms}",
                 "Method": "GET",
                 "IconURL": "https://cdn-static.ecosia.org/static/icons/favicon.ico",
-                "Alias": "Eco",
+                "Alias": "@ecosia",
                 "Description": "Ecosia Search"
                 },
                 {
@@ -47,7 +37,7 @@
                 "URLTemplate": "https://qwant.com/?q={searchTerms}&hc=0&hti=0&vt=1&b=1&si=0&c=blue&ch=none&eco_suggest=0&t=web",
                 "Method": "GET",
                 "IconURL": "https://qwant.com/favicon.ico",
-                "Alias": "Qwant",
+                "Alias": "@qwant",
                 "Description": "Qwant"
                 },
                 {
@@ -55,7 +45,7 @@
                 "URLTemplate": "https://www.startpage.com/sp/search?query={searchTerms}&cat=web&pl=opensearch",
                 "Method": "GET",
                 "IconURL": "https://www.startpage.com/favicon.ico",
-                "Alias": "Start",
+                "Alias": "@startpage",
                 "Description": "Startpage"
                 },
                 {
@@ -63,7 +53,7 @@
                 "URLTemplate": "https://metager.org/meta/meta.ger3?focus=web&eingabe={searchTerms}&encoding=utf8&lang=en",
                 "Method": "GET",
                 "IconURL": "https://metager.org/favicon.ico",
-                "Alias": "MetaGer",
+                "Alias": "@metager",
                 "Description": "MetaGer"
                 }
             ]
