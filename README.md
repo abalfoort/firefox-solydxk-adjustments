@@ -1,2 +1,9 @@
 # firefox-solydxk-adjustments
-SolydXK configuration adjustements for Mozilla Firefox
+SolydXK configuration adjustements for:
+
+* Firefox ESR
+* Firefox
+* Waterfox
+* Waterfox Classic
+* Librewolf
+
