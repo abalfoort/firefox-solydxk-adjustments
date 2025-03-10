@@ -1,0 +1,4 @@
+interest-noawait /usr/lib/firefox-esr/firefox-esr
+interest-noawait /usr/lib/firefox/firefox
+interest-noawait /opt/waterfox/waterfox
+interest-noawait /usr/share/librewolf/librewolf
