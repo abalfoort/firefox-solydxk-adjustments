@@ -1,3 +1,18 @@
+firefox-solydxk-adjustments (2025.03.04) stable; urgency=low
+
+  * Updated distribution.ini and policies.json
+  * Only install files if they do not already exist
+  * Provide files for all Firefox derivates
+  * No need for extensions: configured in policies.json
+
+ -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Tue, 04 Mar 2025 20:16:18 +0100
+
+firefox-solydxk-adjustments (2025.03.03) stable; urgency=low
+
+  * Updated extensions
+
+ -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Mon, 03 Mar 2025 11:37:56 +0100
+
 firefox-solydxk-adjustments (2023.06.24) stable; urgency=low
 
   * Remove dead symlinks
