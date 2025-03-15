@@ -1,3 +1,11 @@
+firefox-solydxk-adjustments (2025.03.15) stable; urgency=low
+
+  * Add keepassxc as a recommended package
+  * Include the KeepassXC-Browser addon
+  * Further hardening settings
+
+ -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Sat, 15 Mar 2025 10:53:23 +0100
+
 firefox-solydxk-adjustments (2025.03.04) stable; urgency=low
 
   * Updated distribution.ini and policies.json
