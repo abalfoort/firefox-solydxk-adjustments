@@ -9,7 +9,8 @@ Package: firefox-solydxk-adjustments
 Architecture: all
 Depends: ${misc:Depends},
   diffutils,
-  firefox | firefox-esr | waterfox | waterfox-classic | librewolf
+  firefox | firefox-esr | waterfox | librewolf
+Recommends: keepassxc
 Replaces: waterfox-solydxk-adjustments
 Conflicts: waterfox-solydxk-adjustments
 Description: Adjustments for Mozilla Firefox (and derivates)
@@ -17,5 +18,4 @@ Description: Adjustments for Mozilla Firefox (and derivates)
  Firefox ESR
  Firefox
  Waterfox
- Waterfox Classic
  Librewolf
