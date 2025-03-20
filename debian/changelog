@@ -1,3 +1,9 @@
+firefox-solydxk-adjustments (2025.03.19) stable; urgency=low
+
+  * Fix missing comma in policies.json
+
+ -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Wed, 19 Mar 2025 19:49:16 +0100
+
 firefox-solydxk-adjustments (2025.03.15) stable; urgency=low
 
   * Add keepassxc as a recommended package
