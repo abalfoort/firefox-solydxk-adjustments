@@ -1,3 +1,9 @@
+firefox-solydxk-adjustments (2025.03.21) stable; urgency=low
+
+  * Make default extensions enabled in private browsing
+
+ -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Fri, 21 Mar 2025 17:14:37 +0100
+
 firefox-solydxk-adjustments (2025.03.19) stable; urgency=low
 
   * Fix missing comma in policies.json
