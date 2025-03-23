@@ -37,6 +37,7 @@
                 "Folder": "SolydXK"
             }
         ],
+        "_comment": "Fist install extensions here, then set private_browsing in ExtensionSettings so that the user can remove them later if desired.",
         "Extensions": {
             "Install": [
                 "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi",
@@ -50,6 +51,21 @@
                 "ebay@search.mozilla.org",
                 "twitter@search.mozilla.org"
             ]
+        },
+        "_comment": "https://mozilla.github.io/policy-templates/#extensionsettings",
+        "ExtensionSettings": {
+            "uBlock0@raymondhill.net": {
+                "installation_mode": "allowed",
+                "private_browsing": true
+            },
+            "skipredirect@sblask": {
+                "installation_mode": "allowed",
+                "private_browsing": true
+            },
+            "keepassxc-browser@keepassxc.org": {
+                "installation_mode": "allowed",
+                "private_browsing": true
+            }
         },
         "FirefoxHome": {
             "Search": true,
