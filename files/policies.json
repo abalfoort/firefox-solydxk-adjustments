@@ -1,5 +1,5 @@
 {
-    "_comment": "https://github.com/mozilla/policy-templates/blob/master/linux/policies.json",
+    "_comment": "https://mozilla.github.io/policy-templates/",
     "policies": {
         "AppAutoUpdate": false,
         "AppUpdateURL": "https://localhost",
@@ -92,15 +92,53 @@
             "Locked": false
         },
         "SearchEngines": {
+            "_comment": "https://european-alternatives.eu/category/search-engines",
             "PreventInstalls": false,
             "Remove": [
                 "Google",
                 "Bing",
                 "Yahoo!",
-                "Startpage",
                 "Amazon.com",
                 "eBay",
                 "Twitter"
+            ],
+            "Add": [
+                {
+                    "Name": "Ecosia",
+                    "URLTemplate": "https://www.ecosia.org/search?q={searchTerms}",
+                    "Method": "GET",
+                    "IconURL": "https://www.ecosia.org/favicon.ico",
+                    "Alias": "@ecosia",
+                    "Description": "The greenest search engine on the planet",
+                    "SuggestURLTemplate": "https://ac.ecosia.org/autocomplete?q={searchTerms}&type=list"
+                },
+                {
+                    "Name": "Qwant",
+                    "URLTemplate": "https://www.qwant.com/?q={searchTerms}",
+                    "Method": "GET",
+                    "IconURL": "https://www.qwant.com/favicon.ico",
+                    "Alias": "@qwant",
+                    "Description": "The search engine that values you as a user, not as a product",
+                    "SuggestURLTemplate": "https://api.qwant.com/api/suggest/?q={searchTerms}"
+                },
+                {
+                    "Name": "Startpage",
+                    "URLTemplate": "https://www.startpage.com/sp/search?query={searchTerms}",
+                    "Method": "GET",
+                    "IconURL": "https://www.startpage.com/favicon.ico",
+                    "Alias": "@startpage",
+                    "Description": "Startpage Search",
+                    "SuggestURLTemplate": "https://www.startpage.com/osuggestions?q={searchTerms}"
+                },
+                {
+                    "Name": "Swisscows",
+                    "URLTemplate": "https://swisscows.com/web?query={searchTerms}",
+                    "Method": "GET",
+                    "IconURL": "https://swisscows.com/favicon.ico",
+                    "Alias": "@swisscows",
+                    "Description": "Anonymous search engine",
+                    "SuggestURLTemplate": ""
+                }
             ],
             "Default": "DuckDuckGo"
         },
