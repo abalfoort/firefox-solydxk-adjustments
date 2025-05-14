@@ -1,3 +1,15 @@
+firefox-solydxk-adjustments (2025.05.14) stable; urgency=low
+
+  * Stricter privacy settings
+
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Wed, 14 May 2025 08:48:58 +0200
+
+firefox-solydxk-adjustments (2025.05.13) stable; urgency=low
+
+  * Fix SolydXK bookmarks cannot be deleted
+
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Tue, 13 May 2025 19:34:03 +0200
+
 firefox-solydxk-adjustments (2025.05.10) stable; urgency=low
 
   * Add some EU search engines
