@@ -14,6 +14,8 @@
         "DisablePocket": true,
         "DisableSetDesktopBackground": false,
         "DisableDeveloperTools": false,
+        "DisplayBookmarksToolbar": true,
+        "ManualAppUpdateOnly": true,
         "NoDefaultBookmarks": true,
         "NetworkPrediction": false,
         "SearchSuggestEnabled": false,
@@ -21,22 +23,6 @@
             "Enabled":  true,
             "Locked": false
         },
-        "Bookmarks": [
-            {
-                "Title": "SolydXK Community",
-                "URL": "https://solydxk.com",
-                "Favicon": "https://solydxk.com/favicons/favicon.ico",
-                "Placement": "toolbar",
-                "Folder": "SolydXK"
-            },
-            {
-                "Title": "SolydXK Community Forums",
-                "URL": "https://forums.solydxk.com",
-                "Favicon": "https://forums.solydxk.com/favicon.ico",
-                "Placement": "toolbar",
-                "Folder": "SolydXK"
-            }
-        ],
         "_comment": "Fist install extensions here, then set private_browsing in ExtensionSettings so that the user can remove them later if desired.",
         "Extensions": {
             "Install": [
