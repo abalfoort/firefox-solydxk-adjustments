@@ -1,3 +1,9 @@
+firefox-solydxk-adjustments (2025.05.15) stable; urgency=low
+
+  * Remove adjustements for LiberWolf, Waterfox, FF beta/dev/nightly
+
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Thu, 15 May 2025 15:22:13 +0200
+
 firefox-solydxk-adjustments (2025.05.14) stable; urgency=low
 
   * Stricter privacy settings
