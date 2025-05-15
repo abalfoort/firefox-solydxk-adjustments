@@ -16,33 +16,22 @@ set -e
 # the debian-policy package
 #
 
-# Function to copy files to destination directory $1
+# Function to remove copied files
 function remove_files() {
-    # Search for installed [browser]-bin file to get the installation directory
-    BINPATHS=$(dpkg -S "$1-bin" 2>/dev/null | grep -E bin$ | awk '{print $2}')
-
-    # There can be more instances installed of the same browser
-    for BINPATH in $BINPATHS; do
-        INSTDIR=$(dirname $BINPATH)
-        if [ -e "$INSTDIR" ]; then
-            # Loop through all files in this package
-            FLSDIR='/usr/share/solydxk/firefox'
-            for F in $(find "$FLSDIR/" -type f -printf '%P\n'); do
-                # Remove the file
-                rm -vf "$INSTDIR/$F"
-            done
+    for F in 'distribution.ini' 'policies.json'; do
+        if [ -e "$1/distribution/$F" ]; then
+            rm -vf "$1/distribution/$F"
         fi
     done
 }
 
-
-
 case "$1" in    
     purge|remove)
         # Remove files when this package is removed
-        remove_files 'firefox'
-        remove_files 'waterfox'
-        remove_files 'librewolf'
+        remove_files '/opt/waterfox'
+        remove_files '/usr/share/librewolf'
+        remove_files '/usr/lib/firefox-esr'
+        remove_files '/opt/firefox'
     ;;
     upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
     ;;

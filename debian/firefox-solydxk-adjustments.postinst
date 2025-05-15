@@ -19,43 +19,42 @@ set -e
 # Function to copy files to destination directory
 function copy_files() {
     # Search for installed [browser]-bin file to get the installation directory
-    BINPATHS=$(dpkg -S "$1-bin" 2>/dev/null | grep -E bin$ | awk '{print $2}')
+    BINPATHS=$(dpkg -S "$1-bin" 2>/dev/null | grep -E '\-bin$' | awk '{print $2}')
 
     # There can be more instances installed of the same browser
     for BINPATH in $BINPATHS; do
-        # Skip waterfox-classic
-        if [[ $BINPATH == *classic* ]]; then
-            continue
-        fi
-
         INSTDIR=$(dirname $BINPATH)
         if [ -e "$INSTDIR" ]; then
+            KEY_VAL=$(grep 'RemotingName=' "$INSTDIR/application.ini")
+            for KEY_WORD in -nightly -beta -dev; do
+                [[ $KEY_VAL == *"$KEY_WORD"* ]] && continue 2  # Exit outer loop if inside a nested loop; use `continue` otherwise
+            done
+
             # Loop through all files in this package
-            FLSDIR='/usr/share/solydxk/firefox'
-            for F in $(find "$FLSDIR/" -type f -printf '%P\n'); do
-                FDIR=$(dirname $F)
-
+            FLSDIR='/usr/share/solydxk/firefox/distribution'
+            for F in $FLSDIR/*; do
+                FNAME=$(basename $F)
                 # Create sub directory
-                if [ ! -z "$INSTDIR/$FDIR" ]; then
-                    mkdir -p "$INSTDIR/$FDIR"
-                fi
-
+                mkdir -p "$INSTDIR/distribution"
                 # Simply copy the file if not equal
-                cmp -s "$FLSDIR/$F" "$INSTDIR/$F" || cp -vf "$FLSDIR/$F" "$INSTDIR/$F"
+                cmp -s "$F" "$INSTDIR/distribution/$FNAME" || cp -vf "$F" "$INSTDIR/distribution/$FNAME"
             done
         fi
     done
 }
 
-function remove_triggered() {
-    if [ ! -e "$1" ]; then
-        return
-    fi
+function remove_files() {
+    for F in 'distribution.ini' 'policies.json'; do
+        if [ -e "$1/distribution/$F" ]; then
+            rm -vf "$1/distribution/$F"
+        fi
+    done
+}
 
+function remove_triggered() {
     BINPATH=$(find "$1" -name "*-bin")
     if [ -z "$BINPATH" ]; then
-        rm -vf "$1/distribution/distribution.ini"
-        rm -vf "$1/distribution/policies.json"
+        remove_files "$1"
     fi
     FLS=$(find "$1" -type f)
     if [ -z "$FLS" ]; then
@@ -63,25 +62,30 @@ function remove_triggered() {
     fi
 }
 
+echo "$1"
 case "$1" in    
     configure|upgrade|update|reconfigure)
         # Firefox browsers
         copy_files 'firefox'
-        copy_files 'waterfox'
-        copy_files 'librewolf'
+        #copy_files 'waterfox'
+        #copy_files 'librewolf'
+
+        # Remove previously copied files
+        remove_files '/opt/waterfox'
+        remove_files '/usr/share/librewolf'
     ;;
     triggered)
         # triggered can be used when:
         # 1. A new browser is installed
         # 2. A browser is updated
         copy_files 'firefox'
-        copy_files 'waterfox'
-        copy_files 'librewolf'
+
+        #copy_files 'waterfox'
+        #copy_files 'librewolf'
         # 3. A browser is removed
         remove_triggered '/usr/lib/firefox-esr'
-        remove_triggered '/usr/lib/firefox'
+        remove_triggered '/opt/firefox'
         remove_triggered '/opt/waterfox'
-        remove_triggered '/opt/waterfox-classic'
         remove_triggered '/usr/share/librewolf'
     ;;
     abort-upgrade|abort-remove|abort-deconfigure)
