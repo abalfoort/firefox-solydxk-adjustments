@@ -1,3 +1,9 @@
+firefox-solydxk-adjustments (2025.05.16) stable; urgency=low
+
+  * Make postinst more flexible
+
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Fri, 16 May 2025 08:47:03 +0200
+
 firefox-solydxk-adjustments (2025.05.15) stable; urgency=low
 
   * Remove adjustements for LiberWolf, Waterfox, FF beta/dev/nightly
