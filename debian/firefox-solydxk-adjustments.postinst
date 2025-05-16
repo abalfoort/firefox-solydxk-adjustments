@@ -18,20 +18,25 @@ set -e
 
 # Function to copy files to destination directory
 function copy_files() {
-    # Search for installed [browser]-bin file to get the installation directory
-    BINPATHS=$(dpkg -S "$1-bin" 2>/dev/null | grep -E '\-bin$' | awk '{print $2}')
+    # You can pass an application name or a installation path
+    if [ -e "$1/application.ini" ]; then
+        INIS="$1/application.ini"
+    else
+        INIS=$(dpkg -S $1*/application.ini | awk '{print $NF}')
+    fi
 
     # There can be more instances installed of the same browser
-    for BINPATH in $BINPATHS; do
-        INSTDIR=$(dirname $BINPATH)
-        if [ -e "$INSTDIR" ]; then
-            KEY_VAL=$(grep 'RemotingName=' "$INSTDIR/application.ini")
+    for INI in $INIS; do
+        if [ -e "$INI" ]; then
+            KEY_VAL=$(grep 'RemotingName=' "$INI")
+            # Skip these versions
             for KEY_WORD in -nightly -beta -dev; do
                 [[ $KEY_VAL == *"$KEY_WORD"* ]] && continue 2  # Exit outer loop if inside a nested loop; use `continue` otherwise
             done
 
             # Loop through all files in this package
             FLSDIR='/usr/share/solydxk/firefox/distribution'
+            INSTDIR=$(dirname $INI)
             for F in $FLSDIR/*; do
                 FNAME=$(basename $F)
                 # Create sub directory
