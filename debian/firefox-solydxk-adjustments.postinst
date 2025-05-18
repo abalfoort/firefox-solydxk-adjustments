@@ -57,6 +57,8 @@ function remove_files() {
 }
 
 function remove_triggered() {
+    [ ! -e "$1" ] && return
+    
     BINPATH=$(find "$1" -name "*-bin")
     if [ -z "$BINPATH" ]; then
         remove_files "$1"
